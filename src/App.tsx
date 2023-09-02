@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import './App.css';
 import tw from 'twin.macro';
+import HomePage from './app/containers/home-page';
 
 const AppContainer = styled.div`
   ${tw`
@@ -13,14 +14,9 @@ const AppContainer = styled.div`
 
 function App() {
   return (
-    // <div className="min-h-screen flex justify-center items-center">
     <AppContainer>
-      fff
-      <h1 className="text-3xl font-bold text-blue-600">
-        Install & Setup Vite + React + Typescript + Tailwind CSS 3
-      </h1>
+      <HomePage></HomePage>
     </AppContainer>
-    // </div>
   );
 }
 
