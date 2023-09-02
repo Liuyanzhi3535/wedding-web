@@ -16,7 +16,7 @@ const OurStoryContainer = styled.div`
 
 export function OurStory() {
   return (
-    <OurStoryContainer>
+    <OurStoryContainer id="ourStory">
       wedding
     </OurStoryContainer>
   );

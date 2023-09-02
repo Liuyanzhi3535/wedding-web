@@ -51,15 +51,20 @@ const NavItem = styled.li<{ menu? }>`
 
 function NavItems() {
   const isMobile = useMediaQuery({ maxWidth: SCREENS.sm });
-  const items = ['Home', 'Our Story', 'Wedding', 'Gallery'];
+  const items = [
+    { lable: 'Home', value: 'home' },
+    { lable: 'Our Story', value: 'ourStory' },
+    { lable: 'Wedding', value: 'wedding' },
+    { lable: 'Gallery', value: 'gallery' },
+  ];
   const navItems = items.map((item) => (
-    <NavItem key={item}>
-      <a href="./test">{item}</a>
+    <NavItem key={item.value}>
+      <a href={'#' + item.value}>{item.lable}</a>
     </NavItem>
   ));
   const mobileNavItems = items.map((item) => (
-    <NavItem key={item} menu>
-      <a href="./test">{item}</a>
+    <NavItem key={item.value} menu>
+      <a href={'#' + item.value}>{item.lable}</a>
     </NavItem>
   ));
 

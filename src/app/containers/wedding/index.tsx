@@ -17,7 +17,7 @@ const WeddingContainer = styled.div`
 
 export function Wedding() {
   return (
-    <WeddingContainer>
+    <WeddingContainer id="wedding">
       wedding
     </WeddingContainer>
   );

@@ -34,7 +34,7 @@ const CarouselContainer = styled.div`
 
 export function Gallery() {
   return (
-    <GalleryContainer>
+    <GalleryContainer id='gallery'>
       <CarouselContainer>
         <Swiper
           slidesPerView={'auto'}

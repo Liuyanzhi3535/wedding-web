@@ -17,7 +17,7 @@ const TopSectionContainer = styled.div`
 
 export function TopSection() {
   return (
-    <TopSectionContainer>
+    <TopSectionContainer id="home">
       top
     </TopSectionContainer>
   );
