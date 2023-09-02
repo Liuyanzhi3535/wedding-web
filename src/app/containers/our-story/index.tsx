@@ -11,13 +11,15 @@ const OurStoryContainer = styled.div`
     pr-3
     lg:pl-12
     lg:pr-12
+    border
+    border-gray-300
   `};
 `;
 
 export function OurStory() {
   return (
     <OurStoryContainer id="ourStory">
-      wedding
+      Our Story
     </OurStoryContainer>
   );
 }

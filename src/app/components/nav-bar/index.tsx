@@ -5,7 +5,7 @@ import { SCREENS } from '../../../../responsive';
 import { useMediaQuery } from 'react-responsive';
 
 const NavBarContainer = styled.div<{ isMobile: boolean }>`
-  min-height: 68px;
+  min-height: 56px;
   ${tw`
   w-full
   max-w-screen-2xl

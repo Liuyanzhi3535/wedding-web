@@ -23,6 +23,7 @@
 
 .swiper-slide {
   width: 60%;
+  background-color: #ccc;
 }
 
 .swiper-slide:nth-child(2n) {

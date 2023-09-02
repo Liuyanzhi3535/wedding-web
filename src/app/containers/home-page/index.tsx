@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import tw from 'twin.macro';
-import Marginer from '../../components/marginer';
+// import Marginer from '../../components/marginer';
 import NavBar from '../../components/nav-bar';
 import { TopSection } from '../top-section';
 import { OurStory } from '../our-story';
@@ -26,7 +26,7 @@ const HomePage = () => (
     <OurStory />
     {/* <Marginer direction="vertical" margin="4em" /> */}
     <Wedding />
-    <Marginer direction="vertical" margin="4em" />
+    {/* <Marginer direction="vertical" margin="4em" /> */}
     <Gallery />
     {/* footer */}
   </PageContainer>

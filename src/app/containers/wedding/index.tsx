@@ -11,7 +11,8 @@ const WeddingContainer = styled.div`
     pr-3
     lg:pl-12
     lg:pr-12
-    backdrop-brightness-95
+    border
+    border-gray-300
   `};
 `;
 

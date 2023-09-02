@@ -20,7 +20,8 @@ const GalleryContainer = styled.div`
     pr-3
     lg:pl-12
     lg:pr-12
-    backdrop-brightness-0
+    border
+    border-gray-300
   `};
 `;
 
