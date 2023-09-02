@@ -1,7 +1,7 @@
 import tw, { styled } from 'twin.macro';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
+import { Navigation, Pagination, Keyboard } from 'swiper/modules';
 
 // Import Swiper styles
 import './gallery.css';
