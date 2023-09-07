@@ -4,7 +4,7 @@ import NavItems from './nav-items';
 import { SCREENS } from '../../../../responsive';
 import { useMediaQuery } from 'react-responsive';
 
-const NavBarContainer = styled.div<{ isMobile: boolean }>`
+const NavBarContainer = styled.div<{ ismobile: number }>`
   min-height: 56px;
   ${tw`
   w-full
@@ -16,22 +16,23 @@ const NavBarContainer = styled.div<{ isMobile: boolean }>`
   lg:pr-12
   justify-center
   `}
-  ${({ isMobile }) =>
-    !isMobile &&
-    css`
-      ${tw`
+  ${({ismobile}) =>
+    !ismobile
+      ? css`
+          ${tw`
       sticky
       top-0
-      [background-color: #ddd]
+      bg-gray-200
       z-10
       `};
-    `};
+        `
+      : ``};
 `;
 
 function NavBar() {
   const isMobile = useMediaQuery({ maxWidth: SCREENS.sm });
   return (
-    <NavBarContainer isMobile={isMobile}>
+    <NavBarContainer ismobile={+isMobile}>
       {/* logo */}
       <NavItems />
     </NavBarContainer>

@@ -1,12 +1,14 @@
 import tw, { styled } from "twin.macro";
+import CountDownTimer from "../../components/count-down-timer";
 
 const WeddingContainer = styled.div`
-  min-height: 400px;
+  /* min-height: 400px; */
   ${tw`
     w-full
     max-w-screen-2xl
     flex
-    justify-between
+    flex-col
+    items-center
     pl-3
     pr-3
     lg:pl-12
@@ -19,7 +21,9 @@ const WeddingContainer = styled.div`
 export function Wedding() {
   return (
     <WeddingContainer id="wedding">
-      wedding
+      <h1>wedding</h1>
+      <div></div>
+      <CountDownTimer></CountDownTimer>
     </WeddingContainer>
   );
 }
