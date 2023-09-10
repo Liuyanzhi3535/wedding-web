@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { styled } from 'styled-components';
 import tw from 'twin.macro';
+import SubTitle from '../subtitle';
 
 const TimerContainer = styled.div`
   ${tw`
@@ -11,15 +12,6 @@ const TimerContainer = styled.div`
     m-4
   `}
 `;
-
-const Title = styled.h1`
-  ${tw`
-    font-bold
-    sm:text-2xl
-    text-gray-700
-    text-lg
-  `}
-`
 
 const ContentContainer = styled.div`
   ${tw`
@@ -91,7 +83,7 @@ function CountDownTimer() {
 
   return (
     <TimerContainer>
-      <Title>倒數</Title>
+      <SubTitle text='倒數'></SubTitle>
       <ContentContainer>
         <NumberBlock>{distanceResult.day}</NumberBlock>
         <TextBlock>天</TextBlock>

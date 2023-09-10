@@ -1,4 +1,5 @@
-import tw, { styled } from "twin.macro";
+import tw, { styled } from 'twin.macro';
+import SectionTitle from '../../components/section-title';
 
 const TopSectionContainer = styled.div`
   min-height: 400px;
@@ -19,7 +20,7 @@ const TopSectionContainer = styled.div`
 export function TopSection() {
   return (
     <TopSectionContainer id="home">
-      top
+      <SectionTitle text="top"></SectionTitle>
     </TopSectionContainer>
   );
 }

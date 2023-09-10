@@ -8,6 +8,7 @@ import './gallery.css';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import SectionTitle from '../../components/section-title';
 
 const GalleryContainer = styled.div`
   min-height: 400px;
@@ -15,7 +16,9 @@ const GalleryContainer = styled.div`
     w-full
     max-w-screen-2xl
     flex
-    justify-between
+    flex-col
+    justify-center
+    items-center
     pl-3
     pr-3
     lg:pl-12
@@ -35,7 +38,8 @@ const CarouselContainer = styled.div`
 
 export function Gallery() {
   return (
-    <GalleryContainer id='gallery'>
+    <GalleryContainer id="gallery">
+      <SectionTitle text="gallery"></SectionTitle>
       <CarouselContainer>
         <Swiper
           slidesPerView={'auto'}

@@ -1,4 +1,5 @@
 import tw, { styled } from "twin.macro";
+import SectionTitle from "../../components/section-title";
 
 const OurStoryContainer = styled.div`
   min-height: 400px;
@@ -6,7 +7,7 @@ const OurStoryContainer = styled.div`
     w-full
     max-w-screen-2xl
     flex
-    justify-between
+    justify-center
     pl-3
     pr-3
     lg:pl-12
@@ -19,7 +20,7 @@ const OurStoryContainer = styled.div`
 export function OurStory() {
   return (
     <OurStoryContainer id="ourStory">
-      Our Story
+      <SectionTitle text="Our Story"></SectionTitle>
     </OurStoryContainer>
   );
 }
