@@ -7,7 +7,8 @@ const OurStoryContainer = styled.div`
     w-full
     max-w-screen-2xl
     flex
-    justify-center
+    flex-col
+    items-center
     pl-3
     pr-3
     lg:pl-12
@@ -17,10 +18,25 @@ const OurStoryContainer = styled.div`
   `};
 `;
 
+const Discription = styled.div`
+    ${tw`
+    inline-block
+    w-[500px]
+    bg-gray-100
+  `}
+`
+
 export function OurStory() {
   return (
     <OurStoryContainer id="ourStory">
       <SectionTitle text="Our Story"></SectionTitle>
+      <Discription>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Iste, aliquid autem. Quasi saepe maxime reprehenderit. 
+        Dicta laborum exercitationem omnis laudantium sapiente necessitatibus nihil. 
+        Praesentium libero nihil veniam laudantium, tempora magni minus rem impedit adipisci veritatis odio pariatur inventore. 
+        Maxime numquam, sed, fugiat incidunt eligendi similique explicabo impedit eaque ducimus perferendis, repellendus voluptas ab eum dolore et? Adipisci illum quasi impedit obcaecati facilis, quidem, consequatur dolor quia iste cum dicta laboriosam est voluptate velit molestias sint temporibus minima optio. Numquam eveniet minus aspernatur, 
+      </Discription>
     </OurStoryContainer>
   );
 }

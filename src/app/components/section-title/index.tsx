@@ -5,7 +5,7 @@ interface TitleProps {
   text: string;
 }
 
-const SectionTitleContainer = styled.h1`
+const SectionTitleContainer = styled.div`
   ${tw`
     text-gray-800
     text-4xl

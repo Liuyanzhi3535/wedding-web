@@ -50,12 +50,13 @@ const TextBlock = styled.div`
 `;
 
 function CountDownTimer() {
-  const [distanceResult, setDistanceResult] = useState({
+  const initialState = {
     day: 0,
     hour: 0,
     minute: 0,
     sec: 0,
-  });
+  };
+  const [distanceResult, setDistanceResult] = useState(initialState);
 
   const TAGET_DATE = new Date(`2023-10-21`);
   const second = 1000;
@@ -67,6 +68,13 @@ function CountDownTimer() {
     const countDownTimer = setInterval(function () {
       const countDown = TAGET_DATE.getTime();
       const distance = countDown - new Date().getTime();
+      const isExpired = distance < 0;
+
+      if (isExpired) {
+        clearInterval(countDownTimer);
+        setDistanceResult(initialState);
+        return
+      }
 
       setDistanceResult({
         day: Math.floor(distance / day),
@@ -74,16 +82,13 @@ function CountDownTimer() {
         minute: Math.floor((distance % hour) / minute),
         sec: Math.floor((distance % minute) / second),
       });
-      if (distance < 0) {
-        clearInterval(countDownTimer);
-      }
     }, 1000);
     return () => clearInterval(countDownTimer);
   });
 
   return (
     <TimerContainer>
-      <SubTitle text='倒數'></SubTitle>
+      <SubTitle text="倒數"></SubTitle>
       <ContentContainer>
         <NumberBlock>{distanceResult.day}</NumberBlock>
         <TextBlock>天</TextBlock>
