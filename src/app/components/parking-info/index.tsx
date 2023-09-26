@@ -4,8 +4,8 @@ import tw from 'twin.macro';
 
 const Empty = styled.div`
   ${tw`
-    h-[240px]
-    w-[400px]
+    h-[180px]
+    w-[300px]
     sm:h-[480px]
     sm:w-[800px]
     bg-gray-200

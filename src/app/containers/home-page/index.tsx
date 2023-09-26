@@ -15,6 +15,11 @@ const PageContainer = styled.div`
     h-full
     items-center
     // overflow-x-hidden
+        // border
+    bg-no-repeat
+    bg-cover
+    bg-bottom
+    bg-top-bg
   `}
 `;
 

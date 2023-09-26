@@ -7,24 +7,28 @@ import { useMediaQuery } from 'react-responsive';
 const NavBarContainer = styled.div<{ ismobile: number }>`
   min-height: 56px;
   ${tw`
-  w-full
-  max-w-screen-2xl
-  flex
-  flex-row
-  items-center
-  lg:pl-12
-  lg:pr-12
-  justify-center
+    w-full
+    flex
+    flex-row
+    items-center
+    lg:pl-12
+    lg:pr-12
+    justify-center
+    bg-top-bar
+    bg-cover
+    bg-no-repeat
+    bg-bottom	
+    h-28
+    z-50
+    sticky
+    top-0
   `}
-  ${({ismobile}) =>
-    !ismobile
+  ${({ ismobile }) =>
+    ismobile
       ? css`
           ${tw`
-      sticky
-      top-0
-      bg-gray-200
-      z-10
-      `};
+            h-14
+          `};
         `
       : ``};
 `;

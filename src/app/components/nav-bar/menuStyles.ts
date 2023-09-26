@@ -1,4 +1,4 @@
-export const  menuStyles =  {
+export const menuStyles = {
   bmBurgerButton: {
     position: 'absolute',
     width: '20px',
@@ -7,7 +7,7 @@ export const  menuStyles =  {
     top: '20px',
   },
   bmBurgerBars: {
-    background: '#373a47',
+    background: '#fff',
   },
   bmBurgerBarsHover: {
     background: '#a90000',
@@ -17,7 +17,7 @@ export const  menuStyles =  {
     width: '24px',
   },
   bmCross: {
-    background: '#bdc3c7',
+    background: '#fff',
   },
   bmMenuWrap: {
     position: 'fixed',
@@ -26,7 +26,7 @@ export const  menuStyles =  {
     top: '0px',
   },
   bmMenu: {
-    background: '#373a47',
+    background: '#b8b7ad',
     padding: '2.5em 1.5em 0',
     fontSize: '1.15em',
   },

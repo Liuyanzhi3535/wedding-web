@@ -33,8 +33,8 @@ const WeddingInfoContainer = styled.div`
 
 const WedddingInfo = styled.div`
   ${tw`
-    h-72
-    w-96
+    h-36
+    w-48
     sm:h-48
     sm:w-64
     md:h-72

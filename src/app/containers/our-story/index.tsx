@@ -5,7 +5,6 @@ const OurStoryContainer = styled.div`
   min-height: 400px;
   ${tw`
     w-full
-    max-w-screen-2xl
     flex
     flex-col
     items-center
@@ -21,7 +20,7 @@ const OurStoryContainer = styled.div`
 const Discription = styled.div`
     ${tw`
     inline-block
-    w-[500px]
+    w-[300px]
     bg-gray-100
   `}
 `

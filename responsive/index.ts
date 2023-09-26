@@ -11,6 +11,12 @@ export const SCREENS = {
   xl: '1280px',
   // => @media (min-width: 1280px) { ... }
 
-  '2xl': '1536px',
-  // => @media (min-width: 1536px) { ... }
+  '2xl': '1440px',
+  // => @media (min-width: 1440px) { ... }
+
+  '3xl': '1920px',
+  // => @media (min-width: 1920px) { ... }
+
+  '4xl': '2560px',
+  // => @media (min-width: 2560px) { ... }
 };
