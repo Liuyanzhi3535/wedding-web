@@ -12,8 +12,6 @@ const OurStoryContainer = styled.div`
     pr-3
     lg:pl-12
     lg:pr-12
-    border
-    border-gray-300
   `};
 `;
 
@@ -21,14 +19,13 @@ const Discription = styled.div`
     ${tw`
     inline-block
     w-[300px]
-    bg-gray-100
   `}
 `
 
 export function OurStory() {
   return (
     <OurStoryContainer id="ourStory">
-      <SectionTitle text="Our Story"></SectionTitle>
+      <SectionTitle titleImg={tw`bg-our-story`}></SectionTitle>
       <Discription>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. 
         Iste, aliquid autem. Quasi saepe maxime reprehenderit. 

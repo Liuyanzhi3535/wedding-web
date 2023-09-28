@@ -14,8 +14,7 @@ const PageContainer = styled.div`
     w-full
     h-full
     items-center
-    // overflow-x-hidden
-        // border
+    overflow-x-hidden
     bg-no-repeat
     bg-cover
     bg-bottom

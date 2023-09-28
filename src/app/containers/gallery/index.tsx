@@ -23,8 +23,6 @@ const GalleryContainer = styled.div`
     pr-3
     lg:pl-12
     lg:pr-12
-    border
-    border-gray-300
   `};
 `;
 
@@ -39,7 +37,10 @@ const CarouselContainer = styled.div`
 export function Gallery() {
   return (
     <GalleryContainer id="gallery">
-      <SectionTitle text="gallery"></SectionTitle>
+      <SectionTitle
+        titleImg={tw`bg-gallery`}
+        hasdecoration={true}
+      ></SectionTitle>
       <CarouselContainer>
         <Swiper
           slidesPerView={'auto'}

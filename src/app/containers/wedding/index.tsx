@@ -16,8 +16,6 @@ const WeddingContainer = styled.div`
     pr-3
     lg:pl-12
     lg:pr-12
-    border
-    border-gray-300
   `};
 `;
 
@@ -46,7 +44,10 @@ const WedddingInfo = styled.div`
 export function Wedding() {
   return (
     <WeddingContainer id="wedding">
-      <SectionTitle text="wedding"></SectionTitle>
+      <SectionTitle
+        titleImg={tw`bg-wedding`}
+        hasdecoration={true}
+      ></SectionTitle>
       <WeddingInfoContainer>
         <WedddingInfo></WedddingInfo>
         <WedddingInfo></WedddingInfo>

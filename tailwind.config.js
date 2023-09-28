@@ -26,6 +26,13 @@ export default {
         'gress-right': "url('/src/assets/images/R草叢@3x.webp')",
         'cloud-left': "url('/src/assets/images/L@3x.webp')",
         'cloud-right': "url('/src/assets/images/R@3x.webp')",
+        'our-story': "url('/src/assets/images/OUR STORY@3x.webp')",
+        'wedding': "url('/src/assets/images/WEDDING@3x.webp')",
+        'gallery': "url('/src/assets/images/GALLERY@3x.webp')",
+        'line-right': "url('/src/assets/images/R LINE@3x.webp')",
+        'line-left': "url('/src/assets/images/L LINE@3x.webp')",
+        'flower-left': "url('/src/assets/images/L 花@3x.webp')",
+        'flower-right': "url('/src/assets/images/R 花@3x.webp')",
       }
     },
     screens: SCREENS,
