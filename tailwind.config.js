@@ -33,7 +33,12 @@ export default {
         'line-left': "url('/src/assets/images/L LINE@3x.webp')",
         'flower-left': "url('/src/assets/images/L 花@3x.webp')",
         'flower-right': "url('/src/assets/images/R 花@3x.webp')",
-      }
+        'flower': "url('/src/assets/images/花@3x.webp')",
+        'gress': "url('/src/assets/images/deco1@3x.webp')",
+      },
+      colors: {
+        'content-green': '#526e07',
+      },
     },
     screens: SCREENS,
   },
