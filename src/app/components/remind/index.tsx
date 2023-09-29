@@ -14,29 +14,28 @@ const DressCode = styled.div`
   ${tw`
     flex
     gap-4
-    my-4
+    mb-4
   `}
 `;
 
-const Empty = styled.div`
+const ColorImg = styled.div`
   ${tw`
     h-16
     w-16
     md:h-24
     md:w-24
-    bg-gray-200
   `}
 `;
 
 const RemindText = styled.div`
   ${tw`
-    w-full
-    text-center
-    bg-gray-200
-    m-4
-    p-4
-    rounded	
     relative
+    text-center
+    bg-white
+    m-4
+    mx-6
+    p-4
+    rounded-2xl
   `}
   &:before {
     content: '';
@@ -47,7 +46,7 @@ const RemindText = styled.div`
       border-x-[15px]
       border-x-transparent
       border-b-[15px]
-      border-b-gray-200
+      border-white
       absolute
       top-[-15px]
       left-1/2
@@ -56,12 +55,64 @@ const RemindText = styled.div`
   }
 `;
 
+const Socks = styled.div`
+  ${tw`
+    absolute
+    h-20
+    w-32
+    top-[-24px]
+    right-[-64px]
+    bg-socks
+    bg-no-repeat
+    bg-contain
+  `}
+`;
+
+const Phone = styled.div`
+  ${tw`
+    absolute
+    h-20
+    w-32
+    top-[104px]
+    left-[-32px]
+    bg-phone
+    bg-no-repeat
+    bg-contain
+  `}
+`;
+const Line = styled.div`
+  ${tw`
+    relative
+    bg-line-right
+    bg-no-repeat
+    bg-contain
+    bg-center
+    w-full
+    h-12
+  `}
+`;
+
 const Cheers = styled.div`
   ${tw`
-    h-24
-    w-24
-    m-4
-    bg-gray-200
+    h-32
+    w-32
+    mb-8
+    bg-cheers
+    bg-no-repeat
+    bg-contain
+  `}
+`;
+
+const Gress = styled.div`
+  ${tw`
+    absolute
+    bottom-0.5
+    right-0.5
+    h-32
+    w-32
+    bg-gress
+    bg-no-repeat
+    bg-contain
   `}
 `;
 
@@ -69,21 +120,39 @@ function Remind() {
   return (
     <RemindContainer>
       <SubTitle text="Dress Code"></SubTitle>
+      <p className="text-[#383838] text-xs tracking-wider m-4">
+        請穿搭米色 / 奶茶色 / 大地色之服裝
+      </p>
       <DressCode>
-        <Empty></Empty>
-        <Empty></Empty>
-        <Empty></Empty>
-        <Empty></Empty>
+        <ColorImg
+          className="bg-[#d3c794]"
+          style={{ borderRadius: '51% 47% 49% 37% / 40% 34% 38% 36%' }}
+        ></ColorImg>
+        <ColorImg
+          className="bg-[#cca885]"
+          style={{ borderRadius: '50% 58% 51% 56% / 72% 45% 64% 37%' }}
+        ></ColorImg>
+        <ColorImg
+          className="bg-[#9e753f]"
+          style={{ borderRadius: '60% 44% 58% 36% / 51% 67% 49% 37%' }}
+        ></ColorImg>
+        <ColorImg
+          className="bg-[#6f9f3b]"
+          style={{ borderRadius: '51% 48% 39% 67% / 50% 54% 48% 36%' }}
+        ></ColorImg>
       </DressCode>
       <RemindText>
-        <h3>溫馨提醒</h3>
-        <p>
-          入席餐廳需要脫鞋.並穿著襪子！
-          <br />
-          當日也備有許多酒款，大家理性飲酒，與您一起分享我們的喜悅
-        </p>
+        <h3 className="text-content-green font-bold mb-2">溫馨提醒</h3>
+        <div className="p-4 text-[#383838] text-sm tracking-wider break-words">
+          <span>場地為市定古蹟，入席餐廳需要脫鞋並穿著襪子！</span>
+          <Line />
+          <span>禮金採現場掃條碼電子支付，請不必額外準備一次性紅包袋</span>
+        </div>
+        <Socks />
+        <Phone />
       </RemindText>
       <Cheers></Cheers>
+      <Gress />
     </RemindContainer>
   );
 }

@@ -9,7 +9,7 @@ const TimerContainer = styled.div`
     flex-col
     items-center
     gap-4
-    m-4
+    m-8
   `}
 `;
 
@@ -28,15 +28,16 @@ const NumberBlock = styled.div`
     flex
     items-center
     justify-center
+    text-content-green
+    bg-white/50
+    p-2
+    mx-1
     sm:h-28
     sm:w-28
-    p-4
-    text-gray-700
-    bg-gray-200
     sm:text-6xl
+    h-10
+    w-10
     text-2xl
-    h-12
-    w-12
   `}
 `;
 
