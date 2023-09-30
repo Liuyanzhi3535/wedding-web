@@ -14,6 +14,7 @@ import gressRight from '../../../assets/images/R草叢@3x.webp';
 import trunk from '../../../assets/images/樹幹@3x.webp';
 import cloudLeft from '../../../assets/images/L@3x.webp';
 import cloudRight from '../../../assets/images/R@3x.webp';
+import mountain from '../../../assets/images/山@3x.webp';
 
 const TopSectionContainer = styled.div`
   ${tw`
@@ -258,8 +259,9 @@ const Gress = styled.div`
     w-[102%]
     right-0.5
     z-20
-    2xl:h-[600px]
-    xl:h-[520px]
+    3xl:h-[800px]
+    2xl:h-[700px]
+    xl:h-[660px]
     lg:h-[480px]
     md:h-[400px]
     sm:h-[312px]
@@ -276,7 +278,8 @@ const House = styled.div`
     bg-contain
     bg-bottom
 
-    xl:h-[540px]
+    xl:h-[680px]
+    xl:bg-cover
 
     lg:h-[520px]
 
@@ -292,7 +295,7 @@ const House = styled.div`
     w-[640px]
     h-[296px]
     right-0.5
-    z-20
+    z-30
   `}
 `;
 
@@ -320,7 +323,7 @@ const Couple = styled.div`
     h-[200px]
     left-[40px]
     bottom-[160px]
-    z-50
+    z-[500]
   `}
 `;
 
@@ -332,21 +335,68 @@ const Tree = styled.div`
     bg-contain
     bg-bottom
 
+    3xl:w-[360px]
+    3xl:h-[420px]
+    3xl:bottom-[520px]
+
+    2xl:w-[300px]
+    2xl:h-[360px]
+    2xl:bottom-[480px]
+
     xl:w-[300px]
     xl:h-[360px]
-    xl:bottom-[346px]
+    xl:bottom-[460px]
 
-    lg:bottom-[316px]
+    lg:bottom-[320px]
 
     md:w-[192px]
     md:h-[240px]
     md:left-[0px]
-    md:bottom-[280px]
+    md:bottom-[270px]
 
     w-[128px]
     h-[160px]
     left-[0px]
     bottom-[192px]
+    z-10
+  `}
+`;
+const Mountain = styled.div`
+  background-image: url(${mountain});
+  ${tw`
+    absolute
+    bg-no-repeat
+    bg-contain
+    bg-bottom
+
+    3xl:w-[700px]
+    3xl:h-[600px]
+    3xl:bottom-[400px]
+
+    2xl:w-[600px]
+    2xl:h-[460px]
+    2xl:bottom-[360px]
+
+    xl:w-[500px]
+    xl:h-[360px]
+    xl:bottom-[380px]
+
+    lg:w-[440px]
+    lg:h-[220px]
+    lg:bottom-[260px]
+
+    md:w-[340px]
+    md:h-[192px]
+    md:bottom-[220px]
+
+    sm:inline-block
+
+    w-[200px]
+    h-[128px]
+    right-[-16px]
+    bottom-[172px]
+    hidden
+
     z-10
   `}
 `;
@@ -359,14 +409,25 @@ const Bike = styled.div`
     bg-contain
     bg-bottom
 
+    3xl:w-[360px]
+    3xl:h-[360px]
+    3xl:right-[480px]
+    3xl:bottom-[480px]
+
+    2xl:w-[280px]
+    2xl:h-[280px]
+    2xl:right-[400px]
+    2xl:bottom-[460px]
+
     xl:w-[280px]
     xl:h-[280px]
-    xl:bottom-[320px]
+    xl:right-[400px]
+    xl:bottom-[420px]
 
     lg:w-[240px]
     lg:h-[240px]
     lg:right-[20%]
-    lg:bottom-[280px]
+    lg:bottom-[300px]
 
     md:w-[200px]
     md:h-[200px]
@@ -396,17 +457,25 @@ const Trunk = styled.div`
 
     xl:w-[200px]
     xl:h-[200px]
-    xl:bottom-[280px]
+    xl:bottom-[300px]
+    xl:left-[480px]
 
-    lg:bottom-[240px]
 
-    md:bottom-[200px]
+    lg:w-[180px]
+    lg:h-[180px]
+    lg:bottom-[260px]
+    lg:left-[280px]
 
-    sm:bottom-[135px]
+    md:w-[160px]
+    md:h-[160px]
+    md:bottom-[180px]
+    md:left-[240px]
+
+    sm:bottom-[160px]
     sm:inline-block
 
-    w-[144px]
-    h-[144px]
+    w-[112px]
+    h-[112px]
     right-[50%]
     translate-x-1/4
     hidden
@@ -460,9 +529,10 @@ export function TopSection() {
       <Gress>
         <Bike />
         <Tree />
-        <Trunk />
+        <Mountain />
         <GressRight />
         <House>
+          <Trunk />
           <Couple />
         </House>
         <GressLeft />

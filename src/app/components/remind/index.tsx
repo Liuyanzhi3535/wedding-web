@@ -137,7 +137,7 @@ function Remind() {
   return (
     <RemindContainer>
       <SubTitle text="Dress Code"></SubTitle>
-      <p className="text-[#383838] text-xs tracking-wider m-4">
+      <p className="text-[#383838] text-xs sm:text-lg tracking-wider m-4">
         請穿搭米色 / 奶茶色 / 大地色之服裝
       </p>
       <DressCode>
@@ -159,8 +159,8 @@ function Remind() {
         ></ColorImg>
       </DressCode>
       <RemindText>
-        <h3 className="text-content-green font-bold mb-2">溫馨提醒</h3>
-        <div className="p-4 text-[#383838] text-sm tracking-wider break-words">
+        <h3 className="text-content-green font-bold mb-2 sm:text-lg">溫馨提醒</h3>
+        <div className="p-4 text-[#383838] text-sm sm:text-base tracking-wider break-words">
           <span>場地為市定古蹟，入席餐廳需要脫鞋並穿著襪子！</span>
           <Line />
           <span>禮金採現場掃條碼電子支付，請不必額外準備一次性紅包袋</span>

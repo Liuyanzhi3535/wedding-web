@@ -22,6 +22,24 @@ import p219 from '../../../assets/photo/0825-0219.jpg';
 import p239 from '../../../assets/photo/0825-0239.jpg';
 import p254 from '../../../assets/photo/0825-0254.jpg';
 
+const pictures = [
+  p001,
+  p003,
+  p030,
+  p045,
+  p065,
+  p087,
+  p094,
+  p120,
+  p123,
+  p131,
+  p148,
+  p183,
+  p219,
+  p239,
+  p254,
+];
+
 // Import Swiper styles
 import 'swiper/swiper-bundle.css';
 
@@ -70,7 +88,10 @@ export function Gallery() {
               setSwiper(swiper);
             }}
             onActiveIndexChange={(swiper) => {
-              console.log('active index is', swiper.activeIndex);
+              const index = swiper.activeIndex;
+              const sc = swiper.slides[index];
+              const s = sc.getElementsByClassName('slide')[0] as HTMLElement;
+              s.style.backgroundImage = `url(${pictures[index]})`;
             }}
           >
             <SwiperSlide>
@@ -80,88 +101,46 @@ export function Gallery() {
               ></div>
             </SwiperSlide>
             <SwiperSlide>
-              <div
-                className="slide"
-                style={{ backgroundImage: `url(${p003})` }}
-              ></div>
+              <div className="slide"></div>
             </SwiperSlide>
             <SwiperSlide>
-              <div
-                className="slide"
-                style={{ backgroundImage: `url(${p030})` }}
-              ></div>
+              <div className="slide"></div>
             </SwiperSlide>
             <SwiperSlide>
-              <div
-                className="slide"
-                style={{ backgroundImage: `url(${p045})` }}
-              ></div>
+              <div className="slide"></div>
             </SwiperSlide>
             <SwiperSlide>
-              <div
-                className="slide"
-                style={{ backgroundImage: `url(${p065})` }}
-              ></div>
+              <div className="slide"></div>
             </SwiperSlide>
             <SwiperSlide>
-              <div
-                className="slide"
-                style={{ backgroundImage: `url(${p087})` }}
-              ></div>
+              <div className="slide"></div>
             </SwiperSlide>
             <SwiperSlide>
-              <div
-                className="slide"
-                style={{ backgroundImage: `url(${p094})` }}
-              ></div>
+              <div className="slide"></div>
             </SwiperSlide>
             <SwiperSlide>
-              <div
-                className="slide"
-                style={{ backgroundImage: `url(${p120})` }}
-              ></div>
+              <div className="slide"></div>
             </SwiperSlide>
             <SwiperSlide>
-              <div
-                className="slide"
-                style={{ backgroundImage: `url(${p123})` }}
-              ></div>
+              <div className="slide"></div>
             </SwiperSlide>
             <SwiperSlide>
-              <div
-                className="slide"
-                style={{ backgroundImage: `url(${p131})` }}
-              ></div>
+              <div className="slide"></div>
             </SwiperSlide>
             <SwiperSlide>
-              <div
-                className="slide"
-                style={{ backgroundImage: `url(${p148})` }}
-              ></div>
+              <div className="slide"></div>
             </SwiperSlide>
             <SwiperSlide>
-              <div
-                className="slide"
-                style={{ backgroundImage: `url(${p183})` }}
-              ></div>
+              <div className="slide"></div>
             </SwiperSlide>
             <SwiperSlide>
-              <div
-                className="slide"
-                style={{ backgroundImage: `url(${p219})` }}
-              ></div>
+              <div className="slide"></div>
             </SwiperSlide>
             <SwiperSlide>
-              <div
-                className="slide"
-                style={{ backgroundImage: `url(${p239})` }}
-              ></div>
+              <div className="slide"></div>
             </SwiperSlide>
             <SwiperSlide>
-              <div
-                className="slide"
-                style={{ backgroundImage: `url(${p254})` }}
-              ></div>
+              <div className="slide"></div>
             </SwiperSlide>
           </Swiper>
           <div className="button-wrapper w-full flex justify-center mt-2">

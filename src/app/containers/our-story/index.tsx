@@ -5,16 +5,14 @@ import flower from '../../../assets/images/花@3x.webp';
 import gress from '../../../assets/images/deco1@3x.webp';
 
 const OurStoryContainer = styled.div`
-  min-height: 400px;
   ${tw`
     w-full
     flex
     flex-col
     items-center
-    pl-3
-    pr-3
-    lg:pl-12
-    lg:pr-12
+    px-3
+    lg:px-12
+    m-6
     relative
   `};
 `;
@@ -72,12 +70,17 @@ const Discription = styled.div`
     lg:text-lg
 
     md:w-[420px]
+    
+    sm:w-[300px]
+    sm:text-base
 
-    w-[300px]
+    w-[240px]
+    text-xs
     m-6
     inline-block
     text-content-green
-    tracking-wide
+    tracking-widest
+    text-center
   `}
 `;
 
@@ -91,12 +94,15 @@ export function OurStory() {
         <Empty />
       </Deco>
       <Discription>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, aliquid
-        autem. Quasi saepe maxime reprehenderit. Dicta laborum exercitationem
-        omnis laudantium sapiente necessitatibus nihil. Praesentium libero nihil
-        veniam laudantium, tempora magni minus rem impedit adipisci veritatis
-        odio pariatur inventore. Maxime numquam, sed, fugiat incidunt eligendi
-        similique explicabo impedit eaque ducimus perferendis, repellendus
+        相識相戀&nbsp;&nbsp;轉瞬十年
+        <br />
+        成為情人&nbsp;&nbsp;成為最好的朋友和家人
+        <br />
+        此刻&nbsp;&nbsp;即將邁入新的階段
+        <br />
+        <br />
+        敬邀沿路相伴的你們&nbsp;&nbsp;同享幸福與喜悅
+        <br />
       </Discription>
     </OurStoryContainer>
   );
