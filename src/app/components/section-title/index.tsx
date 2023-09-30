@@ -1,8 +1,12 @@
 import { css, styled } from 'styled-components';
-import tw, { TwStyle } from 'twin.macro';
+import tw from 'twin.macro';
+import lineRight from '../../../assets/images/L_LINE@3x.webp';
+import lineLeft from '../../../assets/images/L_LINE@3x.webp';
+import flowerRight from '../../../assets/images/R_花@3x.webp';
+import flowerLeft from '../../../assets/images/L_花@3x.webp';
 
 interface TitleProps {
-  titleImg: TwStyle;
+  titleImg: string;
   hasdecoration?: boolean;
 }
 
@@ -14,12 +18,14 @@ const SectionTitleContainer = styled.div`
 `;
 
 const LineLeft = styled.div<{ hasdecoration: 0 | 1 }>`
+  background-image: url(${lineLeft});
   ${tw`
     relative
-    bg-line-left
     bg-no-repeat
     bg-contain
     bg-center
+
+    md:w-56
     w-14
     h-16
   `}
@@ -28,15 +34,21 @@ const LineLeft = styled.div<{ hasdecoration: 0 | 1 }>`
       ? css`    
         &:before {
           content: '';
+          background-image: url(${flowerLeft});
           ${tw`
             inline-block
             absolute
-            top-[-8px]
-            left-[-68px]
-            bg-flower-left
             bg-no-repeat
             bg-contain
             bg-left
+            
+            md:top-[-40px]
+            md:left-[-92px]
+            md:w-36
+            md:h-36
+            
+            top-[-8px]
+            left-[-68px]
             w-20
             h-20
           `}
@@ -44,11 +56,12 @@ const LineLeft = styled.div<{ hasdecoration: 0 | 1 }>`
       : css`    
         &:before {
           content: '';
+          background-image: url(${lineRight});
           ${tw`
+            md:hidden
             inline-block
             absolute
             left-[-56px]
-            bg-line-left
             bg-no-repeat
             bg-contain
             bg-center
@@ -60,12 +73,15 @@ const LineLeft = styled.div<{ hasdecoration: 0 | 1 }>`
 `;
 
 const LineRight = styled.div<{ hasdecoration: 0 | 1 }>`
+  background-image: url(${lineRight});
   ${tw`
     relative
-    bg-line-right
     bg-no-repeat
     bg-contain
     bg-center
+
+    md:w-56
+
     w-14
     h-16
   `}
@@ -73,16 +89,22 @@ const LineRight = styled.div<{ hasdecoration: 0 | 1 }>`
     hasdecoration
       ? css`    
         &:before {
+          background-image: url(${flowerRight});
           content: '';
           ${tw`
             inline-block
             absolute
-            top-[-16px]
-            right-[-68px]
-            bg-flower-right
             bg-no-repeat
             bg-contain
             bg-right
+
+            md:top-[-48px]
+            md:right-[-92px]
+            md:w-40
+            md:h-40
+
+            top-[-16px]
+            right-[-68px]
             w-24
             h-24
           `}
@@ -90,11 +112,12 @@ const LineRight = styled.div<{ hasdecoration: 0 | 1 }>`
       : css`    
         &:before {
           content: '';
+          background-image: url(${lineRight});
           ${tw`
+            md:hidden
             inline-block
             absolute
             right-[-56px]
-            bg-line-right
             bg-no-repeat
             bg-contain
             bg-center
@@ -105,21 +128,24 @@ const LineRight = styled.div<{ hasdecoration: 0 | 1 }>`
   }
 `;
 
-const TitleImage = styled.div<{ image: TwStyle }>`
+const TitleImage = styled.div<{ image: string }>`
   ${tw`
     bg-no-repeat
     bg-contain
     bg-center
+
     xl:w-80
-    xl:h-44
-    lg:w-48
-    lg:h-36
+    xl:h-16
+
+    md:w-56
+    md:h-16
+
     w-28
     h-16
   `}
   ${({ image }) =>
     css`
-      ${image}
+      background-image: url(${image});
     `}
 `;
 

@@ -4,6 +4,23 @@ import { useState } from 'react';
 import SwiperCore from 'swiper';
 import { Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import background_3 from '../../../assets/images/BG_3.webp';
+import gallery from '../../../assets/images/GALLERY@3x.webp';
+import p001 from '../../../assets/photo/0825-0001.jpg';
+import p003 from '../../../assets/photo/0825-0003.jpg';
+import p030 from '../../../assets/photo/0825-0030.jpg';
+import p045 from '../../../assets/photo/0825-0045.jpg';
+import p065 from '../../../assets/photo/0825-0065.jpg';
+import p087 from '../../../assets/photo/0825-0087.jpg';
+import p094 from '../../../assets/photo/0825-0094.jpg';
+import p120 from '../../../assets/photo/0825-0120.jpg';
+import p123 from '../../../assets/photo/0825-0123.jpg';
+import p131 from '../../../assets/photo/0825-0131.jpg';
+import p148 from '../../../assets/photo/0825-0148.jpg';
+import p183 from '../../../assets/photo/0825-0183.jpg';
+import p219 from '../../../assets/photo/0825-0219.jpg';
+import p239 from '../../../assets/photo/0825-0239.jpg';
+import p254 from '../../../assets/photo/0825-0254.jpg';
 
 // Import Swiper styles
 import 'swiper/swiper-bundle.css';
@@ -13,15 +30,14 @@ import './gallery.css';
 SwiperCore.use([Pagination]);
 
 const GalleryContainer = styled.div`
+  background-image: url(${background_3});
   min-height: 400px;
   ${tw`
-    bg-bottom-bg
     bg-cover
     bg-no-repeat
     p-6
     pb-12
     w-full
-    max-w-screen-2xl
     flex
     flex-col
     justify-center
@@ -30,7 +46,6 @@ const GalleryContainer = styled.div`
 `;
 
 const CarouselContainer = styled.div`
-  height: 350px;
   ${tw`
     w-full
     px-8
@@ -42,10 +57,7 @@ export function Gallery() {
 
   return (
     <GalleryContainer id="gallery">
-      <SectionTitle
-        titleImg={tw`bg-gallery`}
-        hasdecoration={true}
-      ></SectionTitle>
+      <SectionTitle titleImg={gallery} hasdecoration={true}></SectionTitle>
       <CarouselContainer>
         <div className="wrapper">
           <Swiper
@@ -62,64 +74,109 @@ export function Gallery() {
             }}
           >
             <SwiperSlide>
-              <div className="slide bg-001"></div>
+              <div
+                className="slide"
+                style={{ backgroundImage: `url(${p001})` }}
+              ></div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="slide bg-003"></div>
+              <div
+                className="slide"
+                style={{ backgroundImage: `url(${p003})` }}
+              ></div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="slide bg-030"></div>
+              <div
+                className="slide"
+                style={{ backgroundImage: `url(${p030})` }}
+              ></div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="slide bg-045"></div>
+              <div
+                className="slide"
+                style={{ backgroundImage: `url(${p045})` }}
+              ></div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="slide bg-065"></div>
+              <div
+                className="slide"
+                style={{ backgroundImage: `url(${p065})` }}
+              ></div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="slide bg-087"></div>
+              <div
+                className="slide"
+                style={{ backgroundImage: `url(${p087})` }}
+              ></div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="slide bg-094"></div>
+              <div
+                className="slide"
+                style={{ backgroundImage: `url(${p094})` }}
+              ></div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="slide bg-120"></div>
+              <div
+                className="slide"
+                style={{ backgroundImage: `url(${p120})` }}
+              ></div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="slide bg-123"></div>
+              <div
+                className="slide"
+                style={{ backgroundImage: `url(${p123})` }}
+              ></div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="slide bg-131"></div>
+              <div
+                className="slide"
+                style={{ backgroundImage: `url(${p131})` }}
+              ></div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="slide bg-148"></div>
+              <div
+                className="slide"
+                style={{ backgroundImage: `url(${p148})` }}
+              ></div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="slide bg-183"></div>
+              <div
+                className="slide"
+                style={{ backgroundImage: `url(${p183})` }}
+              ></div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="slide bg-219"></div>
+              <div
+                className="slide"
+                style={{ backgroundImage: `url(${p219})` }}
+              ></div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="slide bg-239"></div>
+              <div
+                className="slide"
+                style={{ backgroundImage: `url(${p239})` }}
+              ></div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="slide bg-254"></div>
+              <div
+                className="slide"
+                style={{ backgroundImage: `url(${p254})` }}
+              ></div>
             </SwiperSlide>
           </Swiper>
           <div className="button-wrapper w-full flex justify-center mt-2">
-          <button
-            className="arrow left"
-            onClick={() => {
-              swiper.slidePrev();
-            }}
-          ></button>
-          <button
-            className="arrow right"
-            onClick={() => {
-              swiper.slideNext();
-            }}
-          ></button>
+            <button
+              className="arrow left"
+              onClick={() => {
+                swiper.slidePrev();
+              }}
+            ></button>
+            <button
+              className="arrow right"
+              onClick={() => {
+                swiper.slideNext();
+              }}
+            ></button>
           </div>
         </div>
       </CarouselContainer>

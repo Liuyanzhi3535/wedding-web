@@ -2,8 +2,15 @@
   --slide-height: 288px;
   --swiper-height: 340px;
   position: relative;
-  /* @apply my-8; */
 }
+
+@media (min-width: 1024px) {
+  .wrapper {
+    --slide-height: 540px;
+    --swiper-height: 600px;
+  }
+}
+
 
 .slide {
   font-size: 1.5rem;
@@ -11,9 +18,6 @@
   margin: 0;
   text-align: center;
   height: var(--slide-height);
-  /* overflow: hidden; */
-  /* background-color: #eee; */
-  /* border-radius: 16px; */
 }
 
 .swiper {
@@ -21,7 +25,6 @@
 }
 
 .swiper-slide {
-  /* Center slide text vertically */
   display: flex;
   justify-content: center;
   align-items: center;

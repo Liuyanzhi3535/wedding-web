@@ -9,12 +9,15 @@ const Title = styled.h2`
   ${tw`
     font-bold
     text-content-green
-    text-base
     tracking-widest
     flex
     items-center
     gap-0.5
     uppercase
+
+    md:text-2xl
+
+    text-base
   `}
 `;
 

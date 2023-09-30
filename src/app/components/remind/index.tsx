@@ -1,6 +1,11 @@
 import { styled } from 'styled-components';
 import SubTitle from '../subtitle';
 import tw from 'twin.macro';
+import lineRight from '../../../assets/images/R_LINE@3x.webp';
+import gress from '../../../assets/images/deco1@3x.webp';
+import cheers from '../../../assets/images/酒@3x.webp';
+import socks from '../../../assets/images/襪子@3x.webp';
+import phone from '../../../assets/images/手機@3x.webp';
 
 const RemindContainer = styled.div`
   ${tw`
@@ -56,34 +61,34 @@ const RemindText = styled.div`
 `;
 
 const Socks = styled.div`
+  background-image: url(${socks});
   ${tw`
     absolute
     h-20
     w-32
     top-[-24px]
     right-[-64px]
-    bg-socks
     bg-no-repeat
     bg-contain
   `}
 `;
 
 const Phone = styled.div`
+  background-image: url(${phone});
   ${tw`
     absolute
     h-20
     w-32
     top-[104px]
     left-[-32px]
-    bg-phone
     bg-no-repeat
     bg-contain
   `}
 `;
 const Line = styled.div`
+  background-image: url(${lineRight});
   ${tw`
     relative
-    bg-line-right
     bg-no-repeat
     bg-contain
     bg-center
@@ -93,26 +98,38 @@ const Line = styled.div`
 `;
 
 const Cheers = styled.div`
+  background-image: url(${cheers});
+
   ${tw`
+    bg-no-repeat
+    bg-contain
+    
+    sm:h-48
+    sm:w-48
+
     h-32
     w-32
     mb-8
-    bg-cheers
-    bg-no-repeat
-    bg-contain
   `}
 `;
 
 const Gress = styled.div`
+  background-image: url(${gress});
+
   ${tw`
     absolute
+    bg-no-repeat
+    bg-contain
+
+    sm:bottom-0.5
+    sm:right-[10%]
+    sm:h-52
+    sm:w-52
+
     bottom-0.5
     right-0.5
     h-32
     w-32
-    bg-gress
-    bg-no-repeat
-    bg-contain
   `}
 `;
 

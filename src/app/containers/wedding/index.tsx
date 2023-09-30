@@ -1,9 +1,16 @@
-import tw, { TwStyle, styled } from 'twin.macro';
+import tw, { styled } from 'twin.macro';
 import CountDownTimer from '../../components/count-down-timer';
 import SectionTitle from '../../components/section-title';
 import ParkingInfo from '../../components/parking-info';
 import Remind from '../../components/remind';
 import { css } from 'styled-components';
+import trunk from '../../../assets/images/樹幹@3x.webp';
+import wedding from '../../../assets/images/WEDDING@3x.webp';
+import when from '../../../assets/images/when@3x.webp';
+import where from '../../../assets/images/where@3x.webp';
+import dish from '../../../assets/images/餐盤@3x.webp';
+import flower2 from '../../../assets/images/deco2@3x.webp';
+import gress2 from '../../../assets/images/deco3@3x.webp';
 
 const WeddingContainer = styled.div`
   /* min-height: 400px; */
@@ -25,19 +32,26 @@ const WeddingInfoContainer = styled.div`
   ${tw`
     flex
     flex-col
+
+    md:w-[660px]
+    md:gap-8
+
     sm:flex-row
+
     gap-16
     m-10
   `}
 `;
 
-const WedddingInfo = styled.div<{ image: TwStyle }>`
+const WedddingInfo = styled.div<{ image: string }>`
   ${tw`
     relative
+    
+    md:w-96
+
     sm:h-48
     sm:w-64
-    md:h-72
-    md:w-96
+
     h-32
     w-52
     bg-white
@@ -51,16 +65,21 @@ const WedddingInfo = styled.div<{ image: TwStyle }>`
     css`    
         &:before {
           content: '';
-          ${image}
+          background-image: url(${image});
           ${tw`
             inline-block
             absolute
-            top-[-36px]
             left-1/2
             translate-x-[-50%]
             bg-no-repeat
             bg-contain
             bg-center
+            
+            md:top-[-48px]
+            md:w-20
+            md:h-24
+
+            top-[-36px]
             w-14
             h-16
           `}
@@ -69,65 +88,106 @@ const WedddingInfo = styled.div<{ image: TwStyle }>`
 
 const CardText = styled.p`
   ${tw`
+    md:text-base
+
     text-xs
     tracking-wider
   `}
 `;
 
 const Trunk = styled.div`
+  background-image: url(${trunk});
   ${tw`
     absolute
+    bg-no-repeat
+    bg-contain
+
+    sm:h-32
+    sm:w-48
+    sm:top-[132px]
+    sm:left-[-80px]
+
     h-20
     w-32
     top-[72px]
     left-[-44px]
-    bg-trunk
-    bg-no-repeat
-    bg-contain
   `}
 `;
 
 const Flower2 = styled.div`
+  background-image: url(${flower2});
   ${tw`
     absolute
+    bg-no-repeat
+    bg-contain
+
+    sm:h-32
+    sm:w-32
+    sm:top-[560px]
+    sm:right-[10%]
+
     h-16
     w-16
     top-[224px]
     right-6
-    bg-flower2
-    bg-no-repeat
-    bg-contain
   `}
 `;
 
 const Gress2 = styled.div`
+  background-image: url(${gress2});
+
   ${tw`
     absolute
+    bg-no-repeat
+    bg-contain
+
+    md:top-[960px]
+    md:left-[10%]
+
+    sm:h-48
+    sm:w-48
+    sm:top-[800px]
+
     h-24
     w-24
     top-[432px]
     left-4
-    bg-gress2
+  `}
+`;
+
+const Dish = styled.div`
+  background-image: url(${dish});
+  ${tw`
+    absolute
     bg-no-repeat
     bg-contain
+    bg-center
+
+    sm:h-24
+    sm:w-44
+    sm:top-16
+    sm:left-[50%]
+    sm:inline-block
+    sm:-translate-x-[92px]
+
+    hidden
+    z-30
   `}
 `;
 
 export function Wedding() {
   return (
     <WeddingContainer id="wedding">
-      <SectionTitle
-        titleImg={tw`bg-wedding`}
-        hasdecoration={true}
-      ></SectionTitle>
+      <SectionTitle titleImg={wedding} hasdecoration={true}></SectionTitle>
       <WeddingInfoContainer>
-        <WedddingInfo image={tw`bg-when`}>
+        <WedddingInfo image={when}>
           <CardText className="text-[#383838]">2023/10/21 Sat.</CardText>
-          <CardText className="text-[#383838]">PM 12:00</CardText>
+          <CardText className="text-[#383838]">AM 11:30</CardText>
           <CardText className="text-content-green">準時開席</CardText>
           <Trunk />
         </WedddingInfo>
-        <WedddingInfo image={tw`bg-where`}>
+        <Dish />
+        <WedddingInfo image={where}>
           <CardText className="text-[#383838]">辛志平校長故居</CardText>
           <div className="flex gap-1 items-center">
             <svg

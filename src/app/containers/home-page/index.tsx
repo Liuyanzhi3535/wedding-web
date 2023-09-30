@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 import tw from 'twin.macro';
-// import Marginer from '../../components/marginer';
 import NavBar from '../../components/nav-bar';
 import { TopSection } from '../top-section';
 import { OurStory } from '../our-story';
 import { Wedding } from '../wedding';
 import { Gallery } from '../gallery';
 import background from '../../../assets/images/BG.webp';
+import footer from '../../../assets/images/Footer@3x.webp';
 
 const PageContainer = styled.div`
   background-image: url(${background});
@@ -24,11 +24,11 @@ const PageContainer = styled.div`
 `;
 
 const Footer = styled.div`
+  background-image: url(${footer});
   ${tw`
     bg-no-repeat
     bg-cover
     bg-bottom
-    bg-footer
     w-full
     h-6
     absolute

@@ -3,9 +3,12 @@ import tw from 'twin.macro';
 import NavItems from './nav-items';
 import { SCREENS } from '../../../../responsive';
 import { useMediaQuery } from 'react-responsive';
+import topBar from '../../../assets/images/底@3x.webp';
+
 
 const NavBarContainer = styled.div<{ ismobile: number }>`
   min-height: 56px;
+  background-image: url(${topBar});
   ${tw`
     w-full
     flex
@@ -14,7 +17,6 @@ const NavBarContainer = styled.div<{ ismobile: number }>`
     lg:pl-12
     lg:pr-12
     justify-center
-    bg-top-bar
     bg-cover
     bg-no-repeat
     bg-bottom	

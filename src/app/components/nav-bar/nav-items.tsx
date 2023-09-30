@@ -1,9 +1,13 @@
 import { css, styled } from 'styled-components';
-import tw, { TwStyle } from 'twin.macro';
+import tw from 'twin.macro';
 import { menuStyles } from './menuStyles';
 import { SCREENS } from '../../../../responsive';
 import { slide as Menu } from 'react-burger-menu';
 import { useMediaQuery } from 'react-responsive';
+import home from '../../../assets/images/Group_146@3x.webp';
+import story from '../../../assets/images/Group_144@3x.webp';
+import message from '../../../assets/images/Group_153@3x.webp';
+import camera from '../../../assets/images/Group_148@3x.webp';
 
 const ListContainer = styled.ul<{ menu: 0 | 1 }>`
   ${tw`
@@ -23,7 +27,7 @@ const ListContainer = styled.ul<{ menu: 0 | 1 }>`
       : ``};
 `;
 
-const NavItem = styled.li<{ menu: 0 | 1; icon: TwStyle }>`
+const NavItem = styled.li<{ menu: 0 | 1; icon: string }>`
   ${tw`
     text-sm
     md:text-sm
@@ -54,7 +58,7 @@ const NavItem = styled.li<{ menu: 0 | 1; icon: TwStyle }>`
             focus:text-white
             m-1.5
           `}
-          &:before{ 
+          &:before {
             ${tw`
               !hidden
             `}
@@ -66,7 +70,7 @@ const NavItem = styled.li<{ menu: 0 | 1; icon: TwStyle }>`
     content: '';
     ${({ icon }) =>
       css`
-        ${icon}
+        background-image: url(${icon});
         ${tw`
           inline-block
           bg-transparent
@@ -87,10 +91,26 @@ const NavItem = styled.li<{ menu: 0 | 1; icon: TwStyle }>`
 function NavItems() {
   const isMobile = useMediaQuery({ maxWidth: SCREENS.sm });
   const items = [
-    { lable: 'Home', value: 'home', icon: tw`bg-home` },
-    { lable: 'Our Story', value: 'ourStory', icon: tw`bg-story` },
-    { lable: 'Wedding', value: 'wedding', icon: tw`bg-message` },
-    { lable: 'Gallery', value: 'gallery', icon: tw`bg-camera` },
+    {
+      lable: 'Home',
+      value: 'home',
+      icon: home,
+    },
+    {
+      lable: 'Our Story',
+      value: 'ourStory',
+      icon: story,
+    },
+    {
+      lable: 'Wedding',
+      value: 'wedding',
+      icon: message,
+    },
+    {
+      lable: 'Gallery',
+      value: 'gallery',
+      icon: camera,
+    },
   ];
   const navItems = items.map((item) => (
     <NavItem key={item.value} menu={0} icon={item.icon}>

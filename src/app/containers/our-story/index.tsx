@@ -1,5 +1,8 @@
 import tw, { styled } from 'twin.macro';
 import SectionTitle from '../../components/section-title';
+import ourStory from '../../../assets/images/OUR_STORY@3x.webp';
+import flower from '../../../assets/images/花@3x.webp';
+import gress from '../../../assets/images/deco1@3x.webp';
 
 const OurStoryContainer = styled.div`
   min-height: 400px;
@@ -12,6 +15,7 @@ const OurStoryContainer = styled.div`
     pr-3
     lg:pl-12
     lg:pr-12
+    relative
   `};
 `;
 
@@ -19,34 +23,44 @@ const Deco = styled.div`
   ${tw`
     flex
     items-center
-    overflow-hidden
     h-16
-    relative
   `}
 `;
 
 const Gress = styled.div`
+  background-image: url(${gress});
   ${tw`
-    bg-gress
     bg-no-repeat
     bg-contain
+
+    lg:left-[5%]
+
+    md:absolute
+    md:top-[10%]
+    md:left-[0%]
+    md:h-[240px]
+    md:w-[240px]
+    
     h-[120px]
     w-[120px]
   `}
 `;
 
 const Flower = styled.div`
+  background-image: url(${flower});
   ${tw`
-    bg-flower
     bg-no-repeat
     bg-contain
     h-[64px]
     w-[120px]
   `}
 `;
+
 const Empty = styled.div`
   ${tw`
-  inline-block
+    md:absolute
+
+    inline-block
     h-[120px]
     w-[120px]
   `}
@@ -54,9 +68,14 @@ const Empty = styled.div`
 
 const Discription = styled.div`
   ${tw`
+    lg:w-[600px]
+    lg:text-lg
+
+    md:w-[420px]
+
+    w-[300px]
     m-6
     inline-block
-    w-[300px]
     text-content-green
     tracking-wide
   `}
@@ -65,7 +84,7 @@ const Discription = styled.div`
 export function OurStory() {
   return (
     <OurStoryContainer id="ourStory">
-      <SectionTitle titleImg={tw`bg-our-story`}></SectionTitle>
+      <SectionTitle titleImg={ourStory}></SectionTitle>
       <Deco>
         <Gress />
         <Flower />

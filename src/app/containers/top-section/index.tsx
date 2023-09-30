@@ -1,55 +1,104 @@
 import tw, { styled } from 'twin.macro';
+import ribbons from '../../../assets/images/彩帶@3x.webp';
+import pigeon from '../../../assets/images/鴿子@3x.webp';
+import married from '../../../assets/images/WERMARRIED@3x.webp';
+import zhi from '../../../assets/images/彥治@3x.webp';
+import ching from '../../../assets/images/陳淨@3x.webp';
+import bowTie from '../../../assets/images/蝴蝶結@3x.webp';
+import couple from '../../../assets/images/人@3x.webp';
+import house from '../../../assets/images/house@3x.webp';
+import tree from '../../../assets/images/樹@3x.webp';
+import bike from '../../../assets/images/腳踏車@3x.webp';
+import gressLeft from '../../../assets/images/L草叢@3x.webp';
+import gressRight from '../../../assets/images/R草叢@3x.webp';
+import trunk from '../../../assets/images/樹幹@3x.webp';
+import cloudLeft from '../../../assets/images/L@3x.webp';
+import cloudRight from '../../../assets/images/R@3x.webp';
 
 const TopSectionContainer = styled.div`
   ${tw`
     // overflow-hidden
     relative
     top-[-40px]
+
     w-full
   `};
 `;
 
 const Ribbons = styled.div`
+  background-image: url(${ribbons});
   ${tw`
     absolute
-    lg:h-[320px]
-    lg:w-[480px]
-    lg:top-[-40px]
-    lg:right-[-80px]
+
+    xl:h-[320px]
+    xl:w-[480px]
+    xl:top-[-40px]
+    xl:right-[-80px]
+
+    md:h-[240px]
+    md:w-[320px]
+    md:top-[1px]
+    md:right-[-80px]
+
     h-[180px]
     w-[240px]
     top-[1px]
     right-[-80px]
-    bg-ribbons
     bg-no-repeat
     bg-contain
   `}
 `;
 
 const Pigeon = styled.div`
+  background-image: url(${pigeon});
   ${tw`
     absolute
-    lg:h-[150px]
-    lg:w-[240px]
-    lg:top-[120px]
-    lg:right-[300px]
+
+
+    2xl:right-[20%]
+
+    xl:h-[104px]
+    xl:w-[160px]
+    xl:top-[140px]
+
+    md:h-[80px]
+    md:w-[144px]
+    md:top-[140px]
+    md:right-[15%]
+
     h-[56px]
     w-[80px]
     top-[240px]
     right-1/4
-    bg-pigeon
     bg-no-repeat
     bg-contain
   `}
 `;
 
 const GressRight = styled.div`
+  background-image: url(${gressRight});
   ${tw`
     absolute
     bg-no-repeat
     bg-contain
     bg-bottom
-    bg-gress-right
+
+    2xl:w-[240px]
+    2xl:h-[180px]
+    2xl:bottom-[240px]
+
+    lg:w-[180px]
+    lg:h-[140px]
+    lg:bottom-[180px]
+
+    md:bottom-[160px]
+
+    sm:w-[144px]
+    sm:h-[80px]
+    sm:right-[-24px]
+    sm:bottom-[88px]
+    sm:z-40
+
     w-[144px]
     h-[80px]
     right-[-64px]
@@ -59,12 +108,19 @@ const GressRight = styled.div`
 `;
 
 const CloudLeft = styled.div`
+  background-image: url(${cloudLeft});
   ${tw`
     absolute
     bg-no-repeat
     bg-contain
     bg-bottom
-    bg-cloud-left
+
+    2xl:w-[180px]
+    2xl:h-[120px]
+    2xl:left-[20%]
+
+    md:left-[15%]
+
     w-[144px]
     h-[80px]
     left-[-40px]
@@ -74,12 +130,20 @@ const CloudLeft = styled.div`
 `;
 
 const CloudRight = styled.div`
+  background-image: url(${cloudRight});
+
   ${tw`
     absolute
     bg-no-repeat
     bg-contain
     bg-bottom
-    bg-cloud-right
+
+    2xl:w-[180px]
+    2xl:h-[120px]
+    2xl:right-[10%]
+
+    md:right-[5%]
+
     w-[112px]
     h-[56px]
     right-[-40px]
@@ -95,10 +159,16 @@ const Banner = styled.div`
     flex
     flex-col
     items-center
+
+    2xl:top-[80px]
+    2xl:h-[240px]
+
     xl:top-[120px]
-    xl:h-[500px]
-    lg:top-[120px]
-    lg:h-[300px]
+    xl:h-[240px]
+
+    lg:top-[140px]
+    lg:h-[180px]
+
     top-[96px]
     h-[150px]
     
@@ -106,16 +176,18 @@ const Banner = styled.div`
 `;
 
 const MarriedTitle = styled.div`
+  background-image: url(${married});
   ${tw`
     bg-no-repeat
     bg-contain
-    bg-married
     bg-bottom
     xl:w-[800px]
     xl:h-[360px]
-    lg:m-[-40px]
+
+    lg:m-[-20px]
     lg:w-[560px]
     lg:h-[240px]
+
     m-[-20px]
     w-[280px]
     h-[120px]
@@ -130,45 +202,51 @@ const Names = styled.div`
 `;
 
 const Zhi = styled.div`
+  background-image: url(${zhi});
   ${tw`
     bg-no-repeat
     bg-contain
-    bg-zhi
     bg-bottom
-    xl:w-80
-    xl:h-44
-    lg:w-48
-    lg:h-36
+
+    2xl:w-40
+    2xl:h-28
+
+    lg:w-36
+    lg:h-24
+
     w-24
     h-16
   `}
 `;
 
 const Ching = styled.div`
+  background-image: url(${ching});
   ${tw`
     bg-no-repeat
     bg-contain
-    bg-ching
     bg-bottom
-    xl:w-96
-    xl:h-44
-    lg:w-48
-    lg:h-36
+
+    2xl:w-40
+    2xl:h-28
+
+    lg:w-36
+    lg:h-24
+
     w-28
     h-16
   `}
 `;
 
 const BowTie = styled.div`
+  background-image: url(${bowTie});
   ${tw`
     bg-no-repeat
     bg-contain
-    bg-bow-tie
     bg-bottom
-    xl:w-48
-    xl:h-44
-    lg:w-36
-    lg:h-32
+
+    lg:w-28
+    lg:h-20
+
     w-16
     h-16
   `}
@@ -177,26 +255,40 @@ const BowTie = styled.div`
 const Gress = styled.div`
   ${tw`
     relative
-    bg-no-repeat
-    bg-contain
-    bg-bottom
-    w-full
+    w-[102%]
     right-0.5
     z-20
+    2xl:h-[600px]
+    xl:h-[520px]
+    lg:h-[480px]
+    md:h-[400px]
+    sm:h-[312px]
     top-[144px]
     h-[296px]
   `}
 `;
 
 const House = styled.div`
+  background-image: url(${house});
   ${tw`
     relative
     bg-no-repeat
     bg-contain
     bg-bottom
-    bg-house
+
+    xl:h-[540px]
+
+    lg:h-[520px]
+
     md:w-full
-    md:h-[900px]
+    md:h-[360px]
+    md:bg-cover
+    md:bg-top
+
+    sm:h-[360px]
+    sm:w-full
+    sm:bg-cover
+
     w-[640px]
     h-[296px]
     right-0.5
@@ -205,31 +297,52 @@ const House = styled.div`
 `;
 
 const Couple = styled.div`
+  background-image: url(${couple});
   ${tw`
     absolute
     bg-no-repeat
     bg-contain
     bg-bottom
-    bg-couple
-    md:w-[420px]
-    md:h-[420px]
-    md:left-[20%]
-    md:top-[360px]
+
+    xl:w-[360px]
+    xl:h-[360px]
+    xl:left-[15%]
+    xl:bottom-[280px]
+
+    lg:bottom-[240px]
+
+    md:w-[280px]
+    md:h-[280px]
+    md:left-[10%]
+    md:bottom-[160px]
+
     w-[200px]
     h-[200px]
     left-[40px]
     bottom-[160px]
-    z-30
+    z-50
   `}
 `;
 
 const Tree = styled.div`
+  background-image: url(${tree});
   ${tw`
     absolute
     bg-no-repeat
     bg-contain
     bg-bottom
-    bg-tree
+
+    xl:w-[300px]
+    xl:h-[360px]
+    xl:bottom-[346px]
+
+    lg:bottom-[316px]
+
+    md:w-[192px]
+    md:h-[240px]
+    md:left-[0px]
+    md:bottom-[280px]
+
     w-[128px]
     h-[160px]
     left-[0px]
@@ -239,12 +352,32 @@ const Tree = styled.div`
 `;
 
 const Bike = styled.div`
+  background-image: url(${bike});
   ${tw`
     absolute
     bg-no-repeat
     bg-contain
     bg-bottom
-    bg-bike
+
+    xl:w-[280px]
+    xl:h-[280px]
+    xl:bottom-[320px]
+
+    lg:w-[240px]
+    lg:h-[240px]
+    lg:right-[20%]
+    lg:bottom-[280px]
+
+    md:w-[200px]
+    md:h-[200px]
+    md:right-[15%]
+    md:bottom-[240px]
+
+    sm:w-[160px]
+    sm:h-[160px]
+    sm:right-[10%]
+    sm:bottom-[135px]
+
     w-[144px]
     h-[144px]
     right-[5%]
@@ -253,21 +386,61 @@ const Bike = styled.div`
   `}
 `;
 
-const GressLeft = styled.div`
+const Trunk = styled.div`
+  background-image: url(${trunk});
   ${tw`
     absolute
     bg-no-repeat
     bg-contain
     bg-bottom
-    bg-gress-left
+
+    xl:w-[200px]
+    xl:h-[200px]
+    xl:bottom-[280px]
+
+    lg:bottom-[240px]
+
+    md:bottom-[200px]
+
+    sm:bottom-[135px]
+    sm:inline-block
+
+    w-[144px]
+    h-[144px]
+    right-[50%]
+    translate-x-1/4
+    hidden
+    bottom-[152px]
+    z-30
+  `}
+`;
+
+const GressLeft = styled.div`
+  background-image: url(${gressLeft});
+  ${tw`
+    absolute
+    bg-no-repeat
+    bg-contain
+    bg-bottom
+
+    2xl:w-[240px]
+    2xl:h-[180px]
+    2xl:bottom-[240px]
+
+    lg:w-[180px]
+    lg:h-[140px]
+    lg:bottom-[180px]
+
+    md:bottom-[160px]
+
     w-[144px]
     h-[80px]
     left-[-24px]
     bottom-[88px]
+
     z-40
   `}
 `;
-
 
 export function TopSection() {
   return (
@@ -287,6 +460,7 @@ export function TopSection() {
       <Gress>
         <Bike />
         <Tree />
+        <Trunk />
         <GressRight />
         <House>
           <Couple />
