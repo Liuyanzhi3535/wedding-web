@@ -22,6 +22,19 @@ const PageContainer = styled.div`
   `}
 `;
 
+const Footer = styled.div`
+  ${tw`
+    bg-no-repeat
+    bg-cover
+    bg-bottom
+    bg-footer
+    w-full
+    h-6
+    absolute
+    bottom-0
+  `}
+`;
+
 const HomePage = () => (
   <PageContainer>
     <NavBar />
@@ -33,6 +46,7 @@ const HomePage = () => (
     {/* <Marginer direction="vertical" margin="4em" /> */}
     <Gallery />
     {/* footer */}
+    <Footer />
   </PageContainer>
 );
 
