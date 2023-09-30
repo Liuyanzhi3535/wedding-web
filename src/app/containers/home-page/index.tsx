@@ -6,8 +6,10 @@ import { TopSection } from '../top-section';
 import { OurStory } from '../our-story';
 import { Wedding } from '../wedding';
 import { Gallery } from '../gallery';
+import background from '../../../assets/images/BG.webp';
 
 const PageContainer = styled.div`
+  background-image: url(${background});
   ${tw`
     flex
     flex-col
@@ -18,7 +20,6 @@ const PageContainer = styled.div`
     bg-no-repeat
     bg-cover
     bg-bottom
-    bg-top-bg
   `}
 `;
 
