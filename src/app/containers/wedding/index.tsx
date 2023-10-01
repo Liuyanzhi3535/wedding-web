@@ -189,7 +189,7 @@ export function Wedding() {
         <Dish />
         <WedddingInfo image={where}>
           <CardText className="text-[#383838]">辛志平校長故居</CardText>
-          <div className="flex gap-1 items-center">
+          <a href='https://maps.app.goo.gl/WGSpy2Z7nFVxT3b59' target='_blank' className="flex gap-1 items-center">
             <svg
               className="fill-orange-400 w-2 h-4"
               xmlns="http://www.w3.org/2000/svg"
@@ -200,7 +200,7 @@ export function Wedding() {
             <CardText className="text-content-green">
               新竹市東區東門街 32 號
             </CardText>
-          </div>
+          </a>
         </WedddingInfo>
       </WeddingInfoContainer>
       <Flower2 />
