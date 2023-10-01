@@ -19,6 +19,7 @@ const LocationText = styled.a`
     justify-center
     items-center
     text-center
+    md:py-8
   `}
 `;
 
@@ -31,7 +32,6 @@ const Map = styled.div`
     bg-contain
     bg-center
 
-    md:my-8
     md:h-[280px]
     md:w-[480px]
 
@@ -80,7 +80,7 @@ function ParkingInfo() {
           <span className="">停九停車場</span>
         </LocationText>
       </Map>
-      <span className='text-xs text-gray-500 -translate-y-8'>* 點擊可開啟 Google Maps</span>
+      <span className='text-xs text-gray-500'>* 點擊可開啟 Google Maps</span>
     </div>
   );
 }
