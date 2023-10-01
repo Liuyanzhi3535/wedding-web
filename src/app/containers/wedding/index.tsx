@@ -191,7 +191,7 @@ export function Wedding() {
           <CardText className="text-[#383838]">辛志平校長故居</CardText>
           <a href='https://maps.app.goo.gl/WGSpy2Z7nFVxT3b59' target='_blank' className="flex gap-1 items-center">
             <svg
-              className="fill-orange-400 w-2 h-4"
+              className="fill-orange-400 w-2 h-4 hover:-translate-y-1"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 384 512"
             >

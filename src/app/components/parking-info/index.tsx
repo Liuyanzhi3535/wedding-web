@@ -46,7 +46,7 @@ function ParkingInfo() {
       <SubTitle text="停車資訊"></SubTitle>
       <Map>
         <LocationText
-          className="-top-16 -left-12 md:-top-16 md:-left-0 h-28 w-36"
+          className="-top-16 -left-12 md:-top-16 md:-left-0 h-28 w-36 hover:-translate-y-1 drop-shadow-2xl"
           style={{ backgroundImage: `url(${parkingLot1})` }}
           target="_blank"
           href="https://maps.app.goo.gl/JDQy4Y3tbZ7BLdbj8"
@@ -59,7 +59,7 @@ function ParkingInfo() {
         </LocationText>
 
         <LocationText
-          className="top-2 -right-12 md:top-16 md:right-6 h-28 w-36"
+          className="top-2 -right-12 md:top-16 md:right-6 h-28 w-36 hover:-translate-y-1 drop-shadow-2xl"
           style={{ backgroundImage: `url(${parkingLot2})` }}
           target="_blank"
           href="https://maps.app.goo.gl/TjvvcY6mcAxT6P6T9"
@@ -72,7 +72,7 @@ function ParkingInfo() {
         </LocationText>
 
         <LocationText
-          className="top-28 -left-10 md:top-48 md:-left-4 h-28 w-36"
+          className="top-28 -left-10 md:top-48 md:-left-4 h-28 w-36 hover:-translate-y-1 drop-shadow-2xl"
           style={{ backgroundImage: `url(${parkingLot3})` }}
           target="_blank"
           href="https://maps.app.goo.gl/gPfuAuvPnVaU6bMs9"
@@ -80,6 +80,7 @@ function ParkingInfo() {
           <span className="">停九停車場</span>
         </LocationText>
       </Map>
+      <span className='text-xs text-gray-500 -translate-y-8'>* 點擊可開啟 Google Maps</span>
     </div>
   );
 }
