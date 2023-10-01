@@ -24,7 +24,7 @@ export default defineConfig({
       ...DEFAULT_OPTIONS,
     }),
   ],
-  base: '/wedding-web/',
+  // base: '/wedding-web/',
   build: {
     rollupOptions: {
       output: {
