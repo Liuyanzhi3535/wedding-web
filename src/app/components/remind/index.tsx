@@ -153,9 +153,9 @@ const Account = styled.div`
 //     md:top-1/2
 //     md:right-4
 //     md:px-4
-//     md:py-1 
-//     md:text-sm 
-//     md:text-white 
+//     md:py-1
+//     md:text-sm
+//     md:text-white
 //     md:font-semibold
 //     md:rounded-full
 //     md:border
@@ -191,9 +191,10 @@ function Remind() {
     (acc) => (
       <Account
         key={acc.account}
-        onClick={() =>
-          navigator.clipboard.writeText(acc.account.split('-').join(''))
-        }
+        onClick={() => {
+          navigator.clipboard.writeText(acc.account.split('-').join(''));
+          alert('複製成功');
+        }}
       >
         <div>{acc.bank}</div>
         <div>{acc.account}</div>
