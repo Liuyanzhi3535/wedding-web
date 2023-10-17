@@ -6,6 +6,8 @@ import gress from '../../../assets/images/deco1@3x.webp';
 import cheers from '../../../assets/images/酒@3x.webp';
 import socks from '../../../assets/images/襪子@3x.webp';
 import phone from '../../../assets/images/手機@3x.webp';
+import { useMediaQuery } from 'react-responsive';
+import { SCREENS } from '../../../../responsive';
 
 const RemindContainer = styled.div`
   ${tw`
@@ -85,6 +87,7 @@ const Phone = styled.div`
     bg-contain
   `}
 `;
+
 const Line = styled.div`
   background-image: url(${lineRight});
   ${tw`
@@ -133,7 +136,85 @@ const Gress = styled.div`
   `}
 `;
 
+const Account = styled.div`
+  ${tw`
+    relative
+    p-2
+    m-2
+    rounded
+    bg-[#d3c79465]
+    cursor-pointer
+  `}
+`;
+
+const CopyBtn = styled.div`
+  ${tw`
+    md:absolute
+    md:top-1/2
+    md:right-4
+    md:px-4
+    md:py-1 
+    md:text-sm 
+    md:text-white 
+    md:font-semibold
+    md:rounded-full
+    md:border
+    md:z-40
+    md:cursor-pointer
+    md:bg-[#d3c794]
+    md:hover:bg-[#d3c79466]
+    md:block
+    md:-translate-y-1/2
+    hidden
+  `}
+`;
+
 function Remind() {
+  const isMobile = useMediaQuery({ maxWidth: SCREENS.sm });
+
+  const accountInfos = [
+    {
+      bank: '聯邦銀行 803',
+      account: '888-50-3100816',
+    },
+    {
+      bank: '中國信託 822',
+      account: '0000-3365-4041-5227',
+    },
+    {
+      bank: '台新銀行 812',
+      account: '2888-10-0722773-9',
+    },
+  ];
+
+  const accoutInfos = accountInfos.map(
+    (acc) => (
+      <Account
+        key={acc.account}
+        onClick={() =>
+          navigator.clipboard.writeText(acc.account.split('-').join(''))
+        }
+      >
+        <div>{acc.bank}</div>
+        <div>{acc.account}</div>
+      </Account>
+    )
+    // isMobile ? (
+    //   <Account key={acc.account} onClick={() => navigator.clipboard.writeText(acc.account)}>
+    //     <div>{acc.bank}</div>
+    //     <div>{acc.account}</div>
+    //   </Account>
+    // ) : (
+    //   <Account key={acc.account}>
+    //     <div>{acc.bank}</div>
+    //     <div>{acc.account}</div>
+    //     <CopyBtn onClick={() => navigator.clipboard.writeText(acc.account)}>
+    //       複製
+    //     </CopyBtn>
+    //   </Account>
+    // )
+  );
+
   return (
     <RemindContainer>
       <SubTitle text="Dress Code"></SubTitle>
@@ -159,11 +240,21 @@ function Remind() {
         ></ColorImg>
       </DressCode>
       <RemindText>
-        <h3 className="text-content-green font-bold mb-2 sm:text-lg">溫馨提醒</h3>
+        <h3 className="text-content-green font-bold mb-2 sm:text-lg">
+          溫馨提醒
+        </h3>
         <div className="p-4 text-[#383838] text-sm sm:text-base tracking-wider break-words">
-          <span>場地為市定古蹟，入席餐廳需要脫鞋並穿著襪子！</span>
+          <p>場地為市定古蹟，入席餐廳需要脫鞋並穿著襪子！</p>
           <Line />
-          <span>禮金採現場掃條碼電子支付，請不必額外準備一次性紅包袋</span>
+          <span>禮金採現場掃條碼轉帳，請不必額外準備一次性紅包袋</span>
+          <br />
+          <br />
+          <div>如有手續費歡迎自行扣掉</div>
+          <div>
+            記得<span className="text-[#ad523b]">備註/說明欄位留下名字！</span>
+          </div>
+          <div>{accoutInfos}</div>
+          <div className="text-xs text-gray-500">* 點擊帳號可直接複製</div>
         </div>
         <Socks />
         <Phone />
