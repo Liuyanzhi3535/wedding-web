@@ -191,10 +191,11 @@ function Remind() {
     (acc) => (
       <Account
         key={acc.account}
-        onClick={() => {
-          navigator.clipboard.writeText(acc.account.split('-').join(''));
-          alert('複製成功');
-        }}
+        onClick={() =>
+          navigator.clipboard
+            .writeText(acc.account.split('-').join(''))
+            .then(() => alert('複製成功'))
+        }
       >
         <div>{acc.bank}</div>
         <div>{acc.account}</div>
