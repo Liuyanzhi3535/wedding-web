@@ -6,8 +6,8 @@ import gress from '../../../assets/images/deco1@3x.webp';
 import cheers from '../../../assets/images/酒@3x.webp';
 import socks from '../../../assets/images/襪子@3x.webp';
 import phone from '../../../assets/images/手機@3x.webp';
-import { useMediaQuery } from 'react-responsive';
-import { SCREENS } from '../../../../responsive';
+// import { useMediaQuery } from 'react-responsive';
+// import { SCREENS } from '../../../../responsive';
 
 const RemindContainer = styled.div`
   ${tw`
@@ -147,30 +147,30 @@ const Account = styled.div`
   `}
 `;
 
-const CopyBtn = styled.div`
-  ${tw`
-    md:absolute
-    md:top-1/2
-    md:right-4
-    md:px-4
-    md:py-1 
-    md:text-sm 
-    md:text-white 
-    md:font-semibold
-    md:rounded-full
-    md:border
-    md:z-40
-    md:cursor-pointer
-    md:bg-[#d3c794]
-    md:hover:bg-[#d3c79466]
-    md:block
-    md:-translate-y-1/2
-    hidden
-  `}
-`;
+// const CopyBtn = styled.div`
+//   ${tw`
+//     md:absolute
+//     md:top-1/2
+//     md:right-4
+//     md:px-4
+//     md:py-1 
+//     md:text-sm 
+//     md:text-white 
+//     md:font-semibold
+//     md:rounded-full
+//     md:border
+//     md:z-40
+//     md:cursor-pointer
+//     md:bg-[#d3c794]
+//     md:hover:bg-[#d3c79466]
+//     md:block
+//     md:-translate-y-1/2
+//     hidden
+//   `}
+// `;
 
 function Remind() {
-  const isMobile = useMediaQuery({ maxWidth: SCREENS.sm });
+  // const isMobile = useMediaQuery({ maxWidth: SCREENS.sm });
 
   const accountInfos = [
     {
